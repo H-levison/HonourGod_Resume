@@ -12,20 +12,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f4f4f4;
     text-align: center;
-    padding: 20px;
+    padding-top: 100px;
 }
 
 /* 🔹 NAVIGATION MENU (Headers) */
 .navbar {
     width: 100%;
-    padding: 30px 0;
-    position: fixed; /* Keeps it on top */
+    padding: 20px 0;
+    position: fixed; 
     top: 0;
     left: 0;
+    background: #f4f4f4;
+    z-index: 100;
     display: flex;
+    justify-content: center;
     justify-content: center; /* Center the nav links */
 }
 
@@ -41,9 +43,9 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color:  #434343;
+    color:  #666666;
     font-size: 15px;
-    font-weight: light;
+    font-weight: lighter;
     transition: color 0.3s ease-in-out;
 }
 
@@ -52,28 +54,26 @@ body {
     color: rgb(157, 143, 231);
 }
 
-/* Spacing between Headings */
+/*Headings */
 h1 {
     font-size: 60px;
-    margin-bottom: 10px; /* Add spacing below h1 */
+    margin-bottom: 10px;
     color: rgb(140, 121, 237);
-    padding: auto;
-    text-align: center;
+    font-weight: bolder;
 }
 
 h2 {
-    font-size: 15px;
-    max-width: 600px; /* Optional: keeps text readable */
+    font-size: 16px;
+    max-width: 600px;
     line-height: 1.5;
-    color: #434343;
+    color: #666666;
     font-weight: lighter;
-    text-align: center;
 }
 
 .section {
     width: 100%; /* Make section span full width */
     padding: 30px 20px; /* Increase padding for spacing */
-    background-color: #fff;
+    /* background-color: #fff; */
     text-align: center;
     border-bottom: 1px;
     border-radius: 10px;
@@ -84,4 +84,29 @@ h2 {
 .section > * {
     max-width: 800px; /* Adjust this value for different content widths */
     margin: 0 auto; /* Center the content */
+}
+
+/* Experience Section Styling */
+#experience h3 {
+    font-size: 30px;
+    color: rgb(140, 121, 237);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+#experience p {
+    font-size: 15px;
+    color: #666666;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+#experience ul {
+    list-style-type: disc;
+    text-align: center;
+    margin: 10 auto;
+    max-width: 800px;
+    line-height: 1.5;
+    color: #666666;
+    font-size: 13px;
+    font-weight: lighter;
 }
