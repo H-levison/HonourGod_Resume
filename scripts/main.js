@@ -1,4 +1,4 @@
-// Get elements for the portfolio slider
+// Getting elements for the portfolio slider
 const slides = document.querySelectorAll('.slider-slide');
 let currentSlide = 0;
 
