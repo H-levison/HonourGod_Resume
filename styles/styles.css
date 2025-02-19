@@ -1,4 +1,4 @@
-/* Reset Default Styles */
+/* Default Styles */
 * {
     margin: 0;
     padding: 0;
@@ -17,25 +17,27 @@ body {
     padding-top: 100px;
 }
 
-/* NAVIGATION MENU (Headers) */
+/* Navigation Menu (Headers) */
 .navbar {
-    width: 100%;
-    padding: 10px 0;
+    width: 55%;
+    padding: 5px 0;
     position: fixed; 
-    top: 0;
-    left: 0;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     background: rgb(140, 121, 237);
     transition: background 0.3s ease-in-out;
     font-weight: bolder;
     z-index: 100;
     display: flex;
     justify-content: center;
+    border-radius: 40px;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .navbar li {
@@ -51,12 +53,27 @@ body {
     
 }
 
-/* Change link color on hover */
+/* Colour for navigation bar mouse hover */
 .navbar a:hover {
     color: #666666;
 }
 
-/*Headings */
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0px 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    .navbar ul {
+        gap: 10px;
+    }
+    .navbar a {
+        font-size: 10px;
+    }
+}
+
+/*Headings Styling*/
 h1 {
     font-size: 60px;
     margin-bottom: 60px;
@@ -72,16 +89,17 @@ h2 {
     color: #666666;
     font-weight: lighter;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
+/* All Sections Styling */
 .section {
     width: 100%;
     padding: 150px 10px;
     text-align: center;
     border-bottom: 1px;
-    border-radius: 10px;
     margin-bottom: 5px;
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Centering the content inside the section */
@@ -91,7 +109,6 @@ h2 {
 }
 
 /* Experience Section Styling */
-
 #experience h2 {
     font-size: 40px;
     color: rgb(140, 121, 237);
@@ -132,7 +149,7 @@ h2 {
     margin: 0 auto;
 }
 
-/* Styling for Left, Center, and Right Parts */
+/* Styling for the different parts */
 .experience-left, .experience-center, .experience-right {
     width: 70%;
     text-align: center;
@@ -141,7 +158,7 @@ h2 {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Ensure the parts take full width on smaller screens */
+/* Responsive container for experience section */
 @media (max-width: 768px) {
     .experience-left, .experience-center, .experience-right {
         width: 100%;
@@ -149,12 +166,13 @@ h2 {
     }
 }
 
-/* Minimalist Download Resume Button */
+/* Download resume button */
 .download-resume-container {
     text-align: center;
     margin-top: 20px;
 }
 
+/* Download resume button styling*/
 .download-resume-button {
     font-size: 14px;
     font-weight: bold;
@@ -168,13 +186,12 @@ h2 {
     transition: background 0.3s ease-in-out;
 }
 
-/* Hover Effect */
+/* Download resume button hover effect */
 .download-resume-button:hover {
     background-color: #666666;
 }
 
-/* Portfolio Slider Styles */
-
+/* Portfolio slider styling */
 #portfolio h2{
     font-size: 40px;
     color: rgb(140, 121, 237);
@@ -198,16 +215,13 @@ h2 {
 .slider-slide {
     min-width: 100%;
     max-width: 100%;
-}
-
-.slider-slide {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 20px;
 }
 
-/* Navigation Arrows */
+/* Navigation arrows styling */
 .prev,
 .next {
     position: absolute;
@@ -219,7 +233,6 @@ h2 {
     cursor: pointer;
     transform: translateY(-50%);
     font-size: 30px;
-    z-index: 10;
 }
 
 .prev {
@@ -230,9 +243,25 @@ h2 {
     right: 200px;
 }
 
-/*Hover Effects for Arrows */
+/*Mouse hover effects for arrows */
 .prev:hover, .next:hover {
     background-color: #666666;
+}
+
+/* Responsive portfolio slider */
+@media (max-width: 768px) {
+    .portfolio-slider {
+        padding: 0 10px;
+    }
+    .slider-slide {
+        min-width: 100%; 
+    }
+    .prev, .next {
+        font-size: 15px;
+        padding: 10px;
+        left: 10px;
+        right: 10px;
+    }
 }
 
 /* Portfolio Section */
@@ -244,7 +273,7 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0.1, 0.2);
 }
 
-/* Minimalist View More Link */
+/* View more link */
 .view-more-container {
     text-align: center;
     margin-top: 30px;
@@ -266,16 +295,17 @@ h2 {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hover Effect */
+/* Mouse hover effect for view more link */
 .view-more-link:hover {
     color: #666666;
 }
 
+/* Mouse hover effect for view more arrow */
 .view-more-link:hover span {
     transform: translateX(5px);
 }
 
-/* Contact Section Styling */
+/* Contact section styling */
 #contact {
     text-align: center;
     padding: 100px 20px;
@@ -294,7 +324,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Social Links Styling */
+/* Social links styling */
 .contact-links {
     display: flex;
     justify-content: center;
@@ -312,11 +342,12 @@ h2 {
     transition: color 0.3s ease-in-out;
 }
 
+/* Mouse hover effect for social links */
 .contact-link:hover {
     color: #666666;
 }
 
-/* Contact Form Styling */
+/* Contact form styling */
 .contact-form {
     max-width: 500px;
     margin: 30px auto;
@@ -334,7 +365,7 @@ h2 {
     font-size: 14px;
 }
 
-/* Send Button */
+/* Send button */
 .send-message-button {
     background-color: rgb(140, 121, 237);
     color: white;
@@ -343,10 +374,11 @@ h2 {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 15px;
     transition: background 0.3s ease-in-out;
 }
 
+/* Mouse hover effect for send button */
 .send-message-button:hover {
     background-color: #666666;
 }
