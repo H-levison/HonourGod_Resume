@@ -5,7 +5,7 @@ This is my **personal portfolio website**, where I showcase my skills, projects,
 ---
 
 ##**Live Demo**
-Check out the live version here: [https://h-levison.github.io/My_Resume/]  
+Check out the live version here: [(https://h-levison.github.io/HonourGod_Resume/)]  
 
 ---
 
